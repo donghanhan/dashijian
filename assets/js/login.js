@@ -31,6 +31,7 @@ $("#reg-box").submit(function(e){
         layer.msg(res.message+"请登录");
         setTimeout(function(){
             $("#reg_box").click();
+            $('.layui-input').val('')
         },1000)
     })
 })
@@ -48,6 +49,7 @@ $("#login-box").on("submit",function(e){
             layer.msg(res.message)
             localStorage.setItem("token",res.token)
             location.href='/index.html'
+            $('.layui-input').val('')
         }
     })
 })
